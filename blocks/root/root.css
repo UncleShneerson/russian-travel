@@ -1,0 +1,64 @@
+.root {
+  /*определяем цветовую палитру*/
+  --color_bg: #2A2C2F;
+  --color_text: #FFFFFF;
+  --color_url-mark: #AAAAAA;
+
+  /* Больше этой ширины - растягивается только бэкграунт */
+  width: 100%;
+  min-width: 320px;
+
+  /* Центруем контент*/
+  margin: 0 auto;
+
+  /* Типографика */
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+
+  /* Визуальные стили */
+  background-color: var(--color_bg);
+  color: var(--color_text);
+
+  /* Определяем ширину контента */
+  --max-width: 100vw;
+  --content-width_l: calc(var(--max-width) - var(--padding_main)*2);
+}
+
+/* Стили для разных экранов  */
+
+@media screen and (min-width:1280px) {
+  .root {
+    --max-width: 1280px;
+    --padding_main: 48px;
+    --padding_second: 100px;
+    --section-gap: 92px;
+  }
+}
+
+@media screen and (max-width: 1279.9px) {
+  .root {
+    --padding_main: 48px;
+    /* в данном случае указываем 0px, т.к. при просто 0 функция calc не понимаем значение */
+    --padding_second: 0px;
+    --padding_accent: 239px;
+    --section-gap: 92px;
+  }
+}
+
+@media screen and (max-width: 1023.9px) {
+  .root {
+    --padding_main: 24px;
+    --section-gap: 88px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .root {
+    --padding_main: 16px;
+    --section-gap: 64px;
+  }
+}

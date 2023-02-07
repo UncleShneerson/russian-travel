@@ -1,0 +1,28 @@
+.places__title {
+  width: 100%;
+  font-size: 72px;
+  line-height: 1.06;
+  font-weight: 900;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1023.9px) {
+  .places__title {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+}
+
+@media only screen and (max-width: 767.9px) {
+  .places__title {
+    font-size: 32px;
+    line-height: 1.09;
+  }
+  /* При ширине страницы 768 дизайнер хочет уместить заголовок Куршская коса в 2 строчки, а зимний байкал в 1 строчку,
+  хотя все помещается в 1. Не придумал ничего лучше такого костыля.
+  Принудительный перенос, который исчезает при маленькой ширине. классом оформлять не стал */
+
+  #hyp {
+    display: none;
+  }
+}

@@ -1,0 +1,45 @@
+.photo-grid {
+  width: var(--content-width_l);
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(var(--grid_columns_photo), 1fr);
+  grid-template-rows: auto;
+  gap: var(--grid_gap_photo);
+  padding-bottom: var(--section-gap);
+}
+
+/* ПОЧЕМУ ВЫБРАЛ ЭТОТ ПУТЬ */
+/* Хотел лучше разобраться с calc() и сделать легкое ручное управление количеством колонок на разных устройствах (а не через auto-fit).
+по дизайну макета мы привязываем начало правой колонки places к началу следующией после середины колонки в photo-grid
+поэтому значение переменной передаю из .photo-grid еще и корневому блоку .root, чтобы оно наследовалось на внешние секции
+с последующим использованием в (../blocks/places/__place/places__place.css),
+но прописать эти значения показалось логичнее здесь, т.к. в этом случае блок легче переиспользовать*/
+
+/* УПРАВЛЕНИЕ КОЛИЧЕСТВОМ КОЛОНОК И GAP */
+@media screen and (min-width:1280px) {
+  .photo-grid, .root {
+    --grid_columns_photo: 4;
+    --grid_gap_photo: 16px;
+  }
+}
+
+@media screen and (max-width: 1279.9px) {
+  .photo-grid, .root {
+    --grid_columns_photo: 3;
+    --grid_gap_photo: 14px;
+  }
+}
+
+@media screen and (max-width: 1023.9px) {
+  .photo-grid, .root {
+    --grid_columns_photo: 2;
+    --grid_gap_photo: 16px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .photo-grid, .root {
+    --grid_columns_photo: 1;
+    --grid_gap_photo: 12px;
+  }
+}

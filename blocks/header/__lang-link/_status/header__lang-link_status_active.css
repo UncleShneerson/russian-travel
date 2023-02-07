@@ -1,0 +1,6 @@
+.header__lang-link_status_active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  /* отключаем возможность нажатия на уже выбранный язык */
+  pointer-events: none;
+}

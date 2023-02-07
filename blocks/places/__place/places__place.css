@@ -1,0 +1,53 @@
+.places__place {
+  --grid_gap-column_places: 40px;
+  --grid_gap-row_places: 48px;
+
+  /* ПОЯСНЕНИЕ ФОРМУЛ */
+  /* Вторая колонка грида выравнена по началу фотографии (которая следует за серединой предыдущей секции photo-grid)
+  для этого высчитываем резиновые переменные для ширины первой и второй колонки
+  первая колонка образуется следующим образом
+  1 - берем ширину всего грида (для больших экранов - с учетом второго отступа)
+  2 - делим это значение пополам
+  3 - отнимаем от первой колонки величину межколоночного растояния в гриде
+  таким образом вторая колонка гдида начинается ровно с середины верхней секции, остался последний шаг
+  4 - добавляем половину межколоночного расстояния секции фотогрид
+  вторая колонка - все тоже самое, только с добавлением гэп (обнулление) и отнимаем половину интервала верхней секции*/
+  --grid_width-column_first: calc((var(--content-width_l) - var(--padding_second)*2)/2 - var(--grid_gap-column_places) + 0.5*var(--grid_gap_photo));
+  --grid_width-column_second: calc((var(--content-width_l) - var(--padding_second)*2)/2 - 0.5*var(--grid_gap_photo));
+
+  box-sizing: border-box;
+  width: calc(var(--content-width_l) - var(--padding_second)*2);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--grid_width-column_first) var(--grid_width-column_second);
+  grid-template-rows: auto;
+  column-gap: var(--grid_gap-column_places);
+  row-gap: var(--grid_gap-row_places);
+  padding-bottom: 80px;
+}
+
+.places__place:last-child {
+  padding-bottom: 0;
+}
+
+/* ВЕЛИЧИНА GAP ДЛЯ РАЗНЫХ УСТРОЙСТВ */
+@media only screen and (max-width: 1279.9px) {
+  .places__place {
+    --grid_gap-column_places: 32px;
+  }
+}
+
+@media only screen and (max-width: 1023.9px) {
+  .places__place {
+    --grid_gap-column_places: 28px;
+    padding-bottom: 73px;
+  }
+}
+
+@media only screen and (max-width: 767.9px) {
+  .places__place {
+    grid-template-columns: var(--content-width_l);
+    --grid_gap-row_places: 32px;
+    padding-bottom: 50px;
+  }
+}

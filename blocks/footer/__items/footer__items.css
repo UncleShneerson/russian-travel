@@ -1,0 +1,16 @@
+.footer__items {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+@media only screen and (max-width: 767.9px) {
+  .footer__items {
+    flex-flow: column wrap;
+    line-height: 1;
+    margin-bottom: 48px;
+    }
+}

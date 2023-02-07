@@ -1,0 +1,4 @@
+.footer__link {
+  color: var(--color_text);
+  text-decoration: none;
+}

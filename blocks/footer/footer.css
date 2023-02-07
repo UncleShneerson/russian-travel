@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--content-width_l);
+  margin: 0 auto;
+  padding-bottom: 24px;
+}

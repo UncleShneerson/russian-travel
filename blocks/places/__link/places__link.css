@@ -1,0 +1,9 @@
+.places__link {
+  font-size: 18px;
+  line-height: 1.22;
+  font-weight: 400;
+  color: var(--color_text);
+  margin: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

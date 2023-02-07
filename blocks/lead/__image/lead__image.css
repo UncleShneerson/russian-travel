@@ -1,0 +1,12 @@
+.lead__image {
+  width: 100%;
+}
+
+@media screen and (max-width: 1023.9px) {
+  .lead__image {
+    width: 100vw;
+    transform: translateX(calc(-1 * var(--padding_main)));
+  }
+
+
+}

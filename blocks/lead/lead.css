@@ -1,0 +1,10 @@
+.lead {
+  box-sizing: border-box;
+  padding-left: var(--padding_second);
+  padding-right: var(--padding_second);
+  width: var(--content-width_l);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-bottom: var(--section-gap);
+}
