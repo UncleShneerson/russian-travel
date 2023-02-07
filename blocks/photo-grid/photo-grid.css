@@ -39,7 +39,13 @@
 
 @media screen and (max-width: 767.9px) {
   .photo-grid, .root {
-    --grid_columns_photo: 1;
+    --grid_columns_photo: 2;
     --grid_gap_photo: 12px;
+  }
+}
+/* Добавил дополнительную точку, т.к. 1 колонка ширине от 550 до 767 выглядит громоздко. Но на обычных смартфонах возвращаем как по макету */
+@media screen and (max-width: 550.9px) {
+  .photo-grid, .root {
+    --grid_columns_photo: 1;
   }
 }
