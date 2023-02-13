@@ -11,6 +11,5 @@
   .footer__items {
     flex-flow: column wrap;
     line-height: 1;
-    margin-bottom: 48px;
-    }
+  }
 }

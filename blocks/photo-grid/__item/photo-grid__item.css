@@ -1,4 +1,5 @@
 .photo-grid__item {
   width: calc((var(--content-width_l) - (var(--grid_gap_photo)*(var(--grid_columns_photo) - 1)))/var(--grid_columns_photo));
+  height: calc(((var(--content-width_l) - (var(--grid_gap_photo)*(var(--grid_columns_photo) - 1)))/var(--grid_columns_photo))*0.75);
   object-fit: cover;
 }

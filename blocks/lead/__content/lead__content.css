@@ -1,0 +1,12 @@
+.lead__content {
+  width: 100%;
+  /* обнуляю пользовательские стили */
+  margin: 0;
+}
+
+@media screen and (max-width: 1023.9px) {
+  .lead__content {
+    width: 100vw;
+    transform: translateX(calc(-1 * var(--padding_main)));
+  }
+}

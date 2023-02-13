@@ -1,9 +1,14 @@
 .header__languages {
-  margin-top: 12px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding-top: 14px;
+  /* обнуляю поля по умолчанию */
+  margin: 0;
 }
 
 @media screen and (max-width: 767.9px) {
   .header__languages {
-    margin-top: 10px;
+    padding-top: 10px;
   }
 }

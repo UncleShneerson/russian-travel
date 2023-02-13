@@ -1,8 +1,9 @@
 .hover-opacity {
   opacity: 1;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .hover-opacity:hover {
-opacity: 0.8;
+/* по брифу был параметр 0.8, но получив комментарий про прозрачность при наведении, подумал что эфект мало заметен и увеличил прозрачность на 10% */
+opacity: 0.7;
 }
